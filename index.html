@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<body style="background:#000; display:flex; justify-content:center; align-items:center; height:100vh; margin:0;">
+    <img id="live" src="https://raw.githubusercontent.com/ЛОГИН/РЕПО/main/live.jpg" style="width:80%; border:2px solid #333;">
+
+    <script>
+        setInterval(() => {
+            const img = document.getElementById('live');
+            const url = img.src.split('?')[0];
+            img.src = url + "?t=" + new Date().getTime();
+        }, 3000); // Обновление каждые 3 сек
+    </script>
+</body>
+</html>
